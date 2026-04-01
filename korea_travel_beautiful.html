@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>✨ 尊享韩国定制 · 首尔 · 釜山 · 济州岛</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --coral: #E8503A;
+  --coral-light: #FF6B52;
+  --gold: #F0A030;
+  --dark: #0D0D1A;
+  --dark2: #1A1A35;
+  --teal: #0E9090;
+  --blue: #1A5FA8;
+  --green: #1A7A45;
+  --cream: #FFF9F5;
+  --text: #1A1A2E;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Sans SC', sans-serif;
+  background: var(--dark);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ─── HERO ─────────────────────────────────────── */
+.hero {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 50%, rgba(232,80,58,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 80% at 80% 30%, rgba(240,160,48,0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 50% at 50% 80%, rgba(14,144,144,0.1) 0%, transparent 50%),
+    linear-gradient(160deg, #0D0D1A 0%, #12112A 40%, #0A1520 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 60px 20px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 80% 20%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 60% 70%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 35% 80%, rgba(255,255,255,0.25) 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 60%, rgba(255,255,255,0.2) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.hero-emoji-ring {
+  display: flex;
+  gap: 18px;
+  font-size: 28px;
+  margin-bottom: 30px;
+  animation: float 4s ease-in-out infinite;
+}
+.hero-emoji-ring span { animation: pulse-emoji 3s ease-in-out infinite; }
+.hero-emoji-ring span:nth-child(2) { animation-delay: 0.3s; }
+.hero-emoji-ring span:nth-child(3) { animation-delay: 0.6s; }
+.hero-emoji-ring span:nth-child(4) { animation-delay: 0.9s; }
+.hero-emoji-ring span:nth-child(5) { animation-delay: 1.2s; }
+.hero-emoji-ring span:nth-child(6) { animation-delay: 1.5s; }
+.hero-emoji-ring span:nth-child(7) { animation-delay: 1.8s; }
+
+@keyframes pulse-emoji {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-8px) scale(1.15); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.hero-badge {
+  background: linear-gradient(135deg, var(--coral), var(--gold));
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  padding: 6px 20px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  box-shadow: 0 0 30px rgba(232,80,58,0.4);
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 7vw, 72px);
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+}
+.hero h1 .accent { color: var(--coral-light); }
+
+.hero-flag { font-size: clamp(28px, 5vw, 48px); }
+
+.hero-sub {
+  font-size: clamp(14px, 2.5vw, 18px);
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 3px;
+  margin: 20px 0 32px;
+  text-align: center;
+}
+
+.hero-cities {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.city-pill {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: white;
+  border-radius: 50px;
+  padding: 8px 22px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+}
+.city-pill:hover { background: rgba(232,80,58,0.25); border-color: var(--coral); }
+.city-pill .cp-icon { margin-right: 6px; }
+
+.scroll-hint {
+  position: absolute;
+  bottom: 30px;
+  color: rgba(255,255,255,0.3);
+  font-size: 11px;
+  letter-spacing: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  animation: bounce 2s infinite;
+}
+.scroll-hint::after {
+  content: '↓';
+  font-size: 18px;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(8px); opacity: 0.8; }
+}
+
+/* ─── MAIN CONTENT ──────────────────────────────── */
+.main {
+  background: var(--cream);
+  position: relative;
+}
+
+/* ─── SECTION WRAPPER ───────────────────────────── */
+.section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 30px;
+}
+
+/* ─── SECTION TITLES ────────────────────────────── */
+.sec-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+  position: relative;
+}
+.sec-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(0,0,0,0.12), transparent);
+}
+.sec-title-icon {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.icon-coral { background: linear-gradient(135deg, var(--coral), #FF7B5E); box-shadow: 0 4px 16px rgba(232,80,58,0.35); }
+.icon-teal  { background: linear-gradient(135deg, var(--teal), #12B8B8); box-shadow: 0 4px 16px rgba(14,144,144,0.35); }
+.icon-blue  { background: linear-gradient(135deg, var(--blue), #2E7FD4); box-shadow: 0 4px 16px rgba(26,95,168,0.35); }
+.icon-green { background: linear-gradient(135deg, var(--green), #26A05A); box-shadow: 0 4px 16px rgba(26,122,69,0.35); }
+.icon-gold  { background: linear-gradient(135deg, #C47F0A, var(--gold)); box-shadow: 0 4px 16px rgba(240,160,48,0.35); }
+.icon-purple{ background: linear-gradient(135deg, #7B2FBE, #A855F7); box-shadow: 0 4px 16px rgba(123,47,190,0.35); }
+
+.sec-title h2 {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+.sec-title p {
+  font-size: 12px;
+  color: #999;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+/* ─── HIGHLIGHT CARDS ───────────────────────────── */
+.hl-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.hl-card {
+  background: white;
+  border-radius: 16px;
+  padding: 18px 20px;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.hl-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--coral), var(--gold));
+  border-radius: 4px 0 0 4px;
+}
+.hl-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+.hl-card:last-child { grid-column: 1 / -1; }
+.hl-emoji { font-size: 22px; margin-bottom: 8px; display: block; }
+.hl-title { font-size: 13px; font-weight: 700; color: var(--coral); margin-bottom: 4px; }
+.hl-text { font-size: 12px; color: #555; line-height: 1.8; }
+
+/* ─── CITY BANNER ───────────────────────────────── */
+.city-banner {
+  background: var(--dark2);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.city-banner-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 30px;
+  position: relative;
+  z-index: 1;
+}
+.city-banner-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  font-size: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 40px;
+  pointer-events: none;
+  line-height: 1;
+}
+.city-banner h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 6px;
+}
+.city-banner-sub {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+.city-tag-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.city-tag {
+  background: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.85);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.banner-seoul { background: linear-gradient(135deg, #1A0F0A 0%, #2A1510 50%, #1A0F0A 100%); }
+.banner-seoul .city-banner-accent { background: linear-gradient(90deg, var(--coral), var(--gold)); height: 3px; width: 60px; border-radius: 3px; margin-bottom: 16px; }
+.banner-busan { background: linear-gradient(135deg, #051525 0%, #0A1E35 50%, #051525 100%); }
+.banner-busan .city-banner-accent { background: linear-gradient(90deg, #2B6CB0, #56CCF2); height: 3px; width: 60px; border-radius: 3px; margin-bottom: 16px; }
+.banner-jeju { background: linear-gradient(135deg, #051A0D 0%, #0A2818 50%, #051A0D 100%); }
+.banner-jeju .city-banner-accent { background: linear-gradient(90deg, #1A8A50, #48D68A); height: 3px; width: 60px; border-radius: 3px; margin-bottom: 16px; }
+
+/* ─── DAY TIMELINE ──────────────────────────────── */
+.days-timeline {
+  background: var(--cream);
+  padding: 40px 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.day-item {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 0;
+  margin-bottom: 6px;
+  position: relative;
+}
+.day-item:not(:last-child) .day-line { display: block; }
+
+.day-num-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 16px;
+}
+.day-num {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px;
+  font-weight: 900;
+  color: white;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+.day-line {
+  width: 2px;
+  flex: 1;
+  min-height: 20px;
+  margin-top: 4px;
+  opacity: 0.2;
+}
+
+.num-seoul { background: linear-gradient(135deg, var(--coral), #FF7B5E); box-shadow: 0 3px 12px rgba(232,80,58,0.4); }
+.line-seoul { background: var(--coral); }
+.num-busan  { background: linear-gradient(135deg, var(--blue), #3B90E8); box-shadow: 0 3px 12px rgba(26,95,168,0.4); }
+.line-busan { background: var(--blue); }
+.num-jeju   { background: linear-gradient(135deg, var(--green), #2DBF6A); box-shadow: 0 3px 12px rgba(26,122,69,0.4); }
+.line-jeju  { background: var(--green); }
+
+.day-card {
+  background: white;
+  border-radius: 16px;
+  padding: 16px 20px 18px;
+  margin-left: 14px;
+  margin-bottom: 6px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: all 0.25s;
+}
+.day-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.1); transform: translateX(3px); }
+
+.day-card-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.day-badge {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  margin-top: 2px;
+}
+.badge-seoul { background: rgba(232,80,58,0.1); color: var(--coral); border: 1px solid rgba(232,80,58,0.2); }
+.badge-busan { background: rgba(26,95,168,0.1); color: var(--blue); border: 1px solid rgba(26,95,168,0.2); }
+.badge-jeju  { background: rgba(26,122,69,0.1); color: var(--green); border: 1px solid rgba(26,122,69,0.2); }
+
+.day-card-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.day-route {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+.route-stop {
+  background: #F5F5F8;
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 11px;
+  color: #444;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.route-arrow {
+  color: #CCC;
+  font-size: 12px;
+}
+
+.day-note {
+  background: #FAFAFA;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 11px;
+  color: #666;
+  line-height: 1.8;
+  border-left: 3px solid #EEE;
+  margin-top: 6px;
+}
+.note-coral { border-left-color: var(--coral); background: rgba(232,80,58,0.04); }
+.note-blue  { border-left-color: var(--blue);  background: rgba(26,95,168,0.04); }
+.note-green { border-left-color: var(--green); background: rgba(26,122,69,0.04); }
+
+.day-meta {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+.meta-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  color: #888;
+  background: #F0F0F4;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+/* ─── TIPS ──────────────────────────────────────── */
+.tips-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.tip-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  transition: all 0.3s;
+}
+.tip-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.09); }
+.tip-icon { font-size: 28px; margin-bottom: 10px; display: block; }
+.tip-label { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+.tip-list { list-style: none; }
+.tip-list li {
+  font-size: 11.5px;
+  color: #555;
+  padding: 4px 0;
+  border-bottom: 1px solid #F5F5F5;
+  line-height: 1.7;
+  display: flex;
+  gap: 6px;
+}
+.tip-list li:last-child { border-bottom: none; }
+.tip-list li .ti { flex-shrink: 0; }
+
+/* ─── AUDIENCE ──────────────────────────────────── */
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+.aud-card {
+  background: white;
+  border-radius: 20px;
+  padding: 20px 12px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  transition: all 0.3s;
+  cursor: default;
+}
+.aud-card:hover { transform: translateY(-5px) scale(1.02); box-shadow: 0 12px 28px rgba(0,0,0,0.12); }
+.aud-icon { font-size: 32px; margin-bottom: 8px; display: block; }
+.aud-label { font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 3px; }
+.aud-sub   { font-size: 10px; color: #AAA; }
+
+/* ─── DIVIDERS ──────────────────────────────────── */
+.wave-divider {
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+  letter-spacing: 8px;
+  color: rgba(0,0,0,0.15);
+}
+
+.city-spacer {
+  height: 60px;
+  background: var(--cream);
+}
+
+/* ─── FOOTER ────────────────────────────────────── */
+footer {
+  background: var(--dark);
+  color: white;
+  padding: 50px 30px 40px;
+  text-align: center;
+}
+.footer-emoji-row { font-size: 24px; letter-spacing: 10px; margin-bottom: 20px; }
+.footer-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--coral-light), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+}
+.footer-sub { font-size: 12px; color: rgba(255,255,255,0.35); letter-spacing: 3px; margin-bottom: 30px; }
+.footer-cities {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.footer-city { text-align: center; color: rgba(255,255,255,0.45); font-size: 12px; }
+.footer-city .fc-icon { font-size: 20px; display: block; margin-bottom: 5px; }
+
+/* ─── HIGHLIGHT STRIP ───────────────────────────── */
+.strip {
+  background: linear-gradient(135deg, var(--coral), var(--gold));
+  padding: 18px 30px;
+  text-align: center;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* ─── ANIMATIONS ────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeInUp 0.6s ease forwards; }
+.fade-in:nth-child(1) { animation-delay: 0.1s; opacity: 0; }
+.fade-in:nth-child(2) { animation-delay: 0.2s; opacity: 0; }
+.fade-in:nth-child(3) { animation-delay: 0.3s; opacity: 0; }
+.fade-in:nth-child(4) { animation-delay: 0.4s; opacity: 0; }
+.fade-in:nth-child(5) { animation-delay: 0.5s; opacity: 0; }
+
+/* ─── RESPONSIVE ────────────────────────────────── */
+@media (max-width: 640px) {
+  .hl-grid { grid-template-columns: 1fr; }
+  .hl-card:last-child { grid-column: 1; }
+  .tips-grid { grid-template-columns: 1fr; }
+  .audience-grid { grid-template-columns: repeat(3, 1fr); }
+  .day-item { grid-template-columns: 52px 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero">
+  <div class="hero-emoji-ring">
+    <span>✈️</span><span>🌸</span><span>🏯</span><span>🎎</span><span>🌊</span><span>🌋</span><span>🎆</span>
+  </div>
+  <div class="hero-badge">✦ PREMIUM KOREA TRAVEL ✦</div>
+  <h1>
+    <span class="hero-flag">🇰🇷</span>
+    <br>
+    <span class="accent">尊享</span>韩国定制
+  </h1>
+  <p class="hero-sub">📍 首尔 · 釜山 · 济州岛 · and more</p>
+  <div class="hero-cities">
+    <div class="city-pill"><span class="cp-icon">🏙️</span>首尔 Seoul</div>
+    <div class="city-pill"><span class="cp-icon">🌊</span>釜山 Busan</div>
+    <div class="city-pill"><span class="cp-icon">🌺</span>济州岛 Jeju</div>
+    <div class="city-pill"><span class="cp-icon">✨</span>专属定制</div>
+  </div>
+  <div class="scroll-hint">SCROLL</div>
+</section>
+
+<!-- ══════════ MAIN ══════════ -->
+<main class="main">
+
+  <!-- 行程亮点 -->
+  <div class="section">
+    <div class="sec-title">
+      <div class="sec-title-icon icon-coral">🌟</div>
+      <div>
+        <h2>行程亮点</h2>
+        <p>TRIP HIGHLIGHTS · 专属品质保障</p>
+      </div>
+    </div>
+
+    <div class="hl-grid">
+      <div class="hl-card fade-in">
+        <span class="hl-emoji">🏨✨</span>
+        <div class="hl-title">甄选住宿</div>
+        <div class="hl-text">全程品牌星级酒店 🛏️，精心筛选地段优越、服务优质的住宿，确保每一晚都安心舒适 💤🌙</div>
+      </div>
+      <div class="hl-card fade-in">
+        <span class="hl-emoji">🚗💨</span>
+        <div class="hl-title">无忧出行</div>
+        <div class="hl-text">商务车专车接送机 🛬，市区9⃣小时包车随心逛 🗺️，告别拥挤公共交通 🙅，尊享专属座驾</div>
+      </div>
+      <div class="hl-card fade-in">
+        <span class="hl-emoji">🎯🔍</span>
+        <div class="hl-title">深度体验</div>
+        <div class="hl-text">千年古宫 🏯 到潮流街区 🏢，传统市场 🛒 到网红海岸线 🌊，一站式解锁韩国 N 种玩法 🎉</div>
+      </div>
+      <div class="hl-card fade-in">
+        <span class="hl-emoji">⏰🕊️</span>
+        <div class="hl-title">自由节奏</div>
+        <div class="hl-text">专属定制路线 📋 ＋ 自由活动日 🎈，既打卡必去景点 📸，也能慢享市井烟火 🌆 随心而行</div>
+      </div>
+      <div class="hl-card fade-in">
+        <span class="hl-emoji">💬🤝</span>
+        <div class="hl-title">贴心服务</div>
+        <div class="hl-text">全程中文司导陪同 👨‍✈️，沟通零障碍 ✅，还能解锁本地人才知道的隐藏攻略 🗝️💡，旅途无后顾之忧</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="strip">🗺️ &nbsp; 特色路线任君选择 &nbsp;·&nbsp; 韩国全线路任意定制 &nbsp; 🎨</div>
+
+  <!-- ══ SEOUL ══ -->
+  <div class="city-banner banner-seoul">
+    <div class="city-banner-bg">🏯</div>
+    <div class="city-banner-inner">
+      <div class="city-banner-accent"></div>
+      <h3>🏙️ 首尔 Seoul</h3>
+      <p class="city-banner-sub">千年古都 · 现代时尚的完美融合 ✨</p>
+      <div class="city-tag-row">
+        <span class="city-tag">🏯 历史古迹</span>
+        <span class="city-tag">🛍️ 购物天堂</span>
+        <span class="city-tag">🍗 美食之都</span>
+        <span class="city-tag">🌸 四季如画</span>
+        <span class="city-tag">🎓 校园文化</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="days-timeline">
+    <div class="day-item">
+      <div class="day-num-col">
+        <div class="day-num num-seoul">D1</div>
+        <div class="day-line line-seoul"></div>
+      </div>
+      <div class="day-card">
+        <div class="day-card-head">
+          <div>
+            <div class="day-badge badge-seoul">DAY 01 · ARRIVAL</div>
+            <div class="day-card-title">✈️ 抵达首尔 · 自由初探 🎉</div>
+          </div>
+        </div>
+        <div class="day-route">
+          <span class="route-stop">🛬 抵达机场</span><span class="route-arrow">›</span>
+          <span class="route-stop">🚗 商务车接机</span><span class="route-arrow">›</span>
+          <span class="route-stop">🏨 入住酒店</span><span class="route-arrow">›</span>
+          <span class="route-stop">🚶‍♀️ 自由活动</span>
+        </div>
+        <div class="day-note note-coral">🍽️ <b>美食推荐</b>：前往 📍<b>明洞</b> 或 📍<b>弘大</b>，品尝 🌶️辣炒年糕 · 🍗炸鸡🍺啤酒 · 🍲部队锅，开启韩国味蕾之旅</div>
+        <div class="day-meta">
+          <span class="meta-tag">🚗 专车接机</span>
+          <span class="meta-tag">🏨 酒店入住</span>
+          <span class="meta-tag">🎈 自由活动</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-item">
+      <div class="day-num-col">
+        <div class="day-num num-seoul">D2</div>
+        <div class="day-line line-seoul"></div>
+      </div>
+      <div class="day-card">
+        <div class="day-card-head">
+          <div>
+            <div class="day-badge badge-seoul">DAY 02 · HISTORY</div>
+            <div class="day-card-title">🏯 历史巡礼 · 城市之巅 &nbsp;<span style="font-size:12px;color:#999;">（包车9小时）</span></div>
+          </div>
+        </div>
+        <div class="day-route">
+          <span class="route-stop">👑 换岗仪式</span><span class="route-arrow">›</span>
+          <span class="route-stop">🏯 景福宫</span><span class="route-arrow">›</span>
+          <span class="route-stop">🏛️ 青瓦台外观</span><span class="route-arrow">›</span>
+          <span class="route-stop">🏘️ 北村韩屋</span><span class="route-arrow">›</span>
+          <span class="route-stop">🗼 首尔塔</span>
+        </div>
+        <div class="day-note note-coral">📸 绝佳拍照机会 · 🎎 感受600年朝鲜王朝历史 · 🌆 首尔塔俯瞰城市全景</div>
+        <div class="day-meta">
+          <span class="meta-tag">🚗 包车9小时</span>
+          <span class="meta-tag">👑 历史文化</span>
+          <span class="meta-tag">📸 打卡拍照</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-item">
+      <div class="day-num-col">
+        <div class="day-num num-seoul">D3</div>
+        <div class="day-line line-seoul"></div>
+      </div>
+      <div class="day-card">
+        <div class="day-card-head">
+          <div>
+            <div class="day-badge badge-seoul">DAY 03 · TRENDY</div>
+            <div class="day-card-title">🎓 学府时尚 · 潮流前沿 &nbsp;<span style="font-size:12px;color:#999;">（包车9小时）</span></div>
+          </div>
+        </div>
+        <div class="day-route">
+          <span class="route-stop">🌸 梨花女大</span><span class="route-arrow">›</span>
+          <span class="route-stop">📚 COEX星空图书馆</span><span class="route-arrow">›</span>
+          <span class="route-stop">💎 清潭洞</span><span class="route-arrow">›</span>
+          <span class="route-stop">🌿 新沙洞</span><span class="route-arrow">›</span>
+          <span class="route-stop">🛍️ 弘大</span>
+        </div>
+        <div class="day-note note-coral">👗 韩式穿搭打卡 · ☕ 网红咖啡探店 · 💄 美妆护肤圣地 · 🎵 弘大夜晚街头文化</div>
+        <div class="day-meta">
+          <span class="meta-tag">🚗 包车9小时</span>
+          <span class="meta-tag">🛍️ 购物</span>
+          <span class="meta-tag">☕ 咖啡打卡</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-item">
+      <div class="day-num-col">
+        <div class="day-num num-seoul">D4</div>
+        <div class="day-line line-seoul"></div>
+      </div>
+      <div class="day-card">
+        <div class="day-card-head">
+          <div>
+            <div class="day-badge badge-seoul">DAY 04 · FREE</div>
+            <div class="day-card-title">🔥 市井烟火 · 自由寻宝 🛒 &nbsp;<span style="font-size:12px;color:#999;">（自由行）</span></div>
+          </div>
+        </div>
+        <div class="day-route">
+          <span class="route-stop">🥘 广藏市场</span><span class="route-arrow">›</span>
+          <span class="route-stop">🛍️ 明洞</span><span class="route-arrow">›</span>
+          <span class="route-stop">🎨 漫画山坡</span><span class="route-arrow">›</span>
+          <span class="route-stop">🌍 梨泰院</span>
+        </div>
+        <div class="day-note note-coral">🍱 地道小吃探索 · 💄 美妆护肤疯狂扫货 · 🎭 多元文化街区体验 · 🌃 夜晚彩灯市场</div>
+        <div class="day-meta">
+          <span class="meta-tag">🎈 自由行</span>
+          <span class="meta-tag">🍜 美食</span>
+          <span class="meta-tag">🌍 文化体验</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-item">
+      <div class="day-num-col">
+        <div class="day-num num-seoul">D5</div>
+      </div>
+      <div class="day-card">
+        <div class="day-card-head">
+          <div>
+            <div class="day-badge badge-seoul">DAY 05 · DEPARTURE</div>
+            <div class="day-card-title">✈️ 满载回忆 · 温馨返程 👋</div>
+          </div>
+        </div>
+        <div class="day-route">
+          <span class="route-stop">🛍️ 机场免税店</span><span class="route-arrow">›</span>
+          <span class="route-stop">🚗 商务专车送机</span><span class="route-arrow">›</span>
+          <span class="route-stop">✈️ 仁川/金浦机场</span><span class="route-arrow">›</span>
+          <span class="route-stop">🏠 平安归来</span>
+        </div>
+        <div class="day-note note-coral">💝 建议提前抵达机场，尽情享受最后的免税购物时光 🛒，带走满满的首尔记忆 🌸</div>
+        <div class="day-meta">
+          <span class="meta-tag">🚗 专车送机</span>
+          <span class="meta-tag">🛍️ 免税购物</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="city-spacer"></div>
+
+  <!-- ══ BUSAN ══ -->
+  <div class="city-banner banner-busan">
+    <div class="city-banner-bg">⛵</div>
+    <div class="city-banner-inner">
+      <div class="city-banner-accent"></div>
+      <h3>🌊 釜山 Busan</h3>
+      <p class="city-banner-sub">海港文艺 · 彩色山城 · 浪漫烟火 🎆</p>
+      <div class="city-tag-row">
+        <span class="city-tag">🏘️ 彩虹渔村</span>
+        <span class="city-tag">🌊 蓝线海岸</span>
+        <span class="city-tag">🎆 游艇烟花</span>
+        <span class="city-tag">🎬 电影圣地</span>
+        <span class="city-tag">🚡 松岛缆车</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="days-timeline">
+    <div class="day-item">
+      <div class="day-num-col">
+        <div class="day-num num-busan">D1</div>
+        <div class="day-line line-busan"></div>
+      </div>
+      <div class="day-card">
+        <div class="day-card-head">
+          <div>
+            <div class="day-badge badge-busan">DAY 01 · ARRIVAL</div>
+            <div class="day-card-title">✈️ 初遇釜山 · 港城初印象 🌅</div>
+          </div>
+        </div>
+        <div class="day-route">
+          <span class="route-stop">🛬 抵达机场</span><span class="route-arrow">›</span>
+          <span class="route-stop">🚗 商务车接机</span><span class="route-arrow">›</span>
+          <span class="route-stop">🏨 入住酒店</span><span class="route-arrow">›</span>
+          <span class="route-stop">🌊 港口漫步</span>
+        </div>
+        <div class="day-note note-blue">🌆 落地即享商务车接送，直达市区酒店办理入住 🛏️，卸下旅途疲惫 😌，迎接海港之旅的第一个日落 🌅</div>
+        <div class="day-meta">
+          <span class="meta-tag">🚗 专车接机</span><span class="meta-tag">🏨 酒店入住</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-item">
+      <div class="day-num-col">
+        <div class="day-num num-busan">D2</div>
+        <div class="day-line line-busan"></div>
+      </div>
+      <div class="day-card">
+        <div class="day-card-head">
+          <div>
+            <div class="day-badge badge-busan">DAY 02 · CULTURE</div>
+            <div class="day-card-title">🎨 文艺渔村 · 彩色釜山之旅 &nbsp;<span style="font-size:12px;color:#999;">（包车9小时）</span></div>
+          </div>
+        </div>
+        <div class="day-route">
+          <span class="route-stop">🏘️ 甘川文化村</span><span class="route-arrow">›</span>
+          <span class="route-stop">🚡 松岛缆车</span><span class="route-arrow">›</span>
+          <span class="route-stop">🏖️ 白浅滩文化村</span><span class="route-arrow">›</span>
+          <span class="route-stop">🎬 BIFF广场</span>
+        </div>
+        <div class="day-note note-blue">🎨 彩色壁画迷宫打卡 · 🚡 乘缆车俯瞰湛蓝大海 · 🎞️ 釜山国际电影节圣地留念</div>
+        <div class="day-meta">
+          <span class="meta-tag">🚗 包车9小时</span><span class="meta-tag">🎨 文艺打卡</span><span class="meta-tag">📸 绝美海景</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-item">
+      <div class="day-num-col">
+        <div class="day-num num-busan">D3</div>
+        <div class="day-line line-busan"></div>
+      </div>
+      <div class="day-card">
+        <div class="day-card-head">
+          <div>
+            <div class="day-badge badge-busan">DAY 03 · ADVENTURE</div>
+            <div class="day-card-title">🚂 海岸冒险 · 蓝线公园奇遇记 &nbsp;<span style="font-size:12px;color:#999;">（包车9小时）</span></div>
+          </div>
+        </div>
+        <div class="day-route">
+          <span class="route-stop">🌊 海云台蓝线公园</span><span class="route-arrow">›</span>
+          <span class="route-stop">🚃 胶囊小火车</span><span class="route-arrow">›</span>
+          <span class="route-stop">🌉 清沙浦天空步道</span><span class="route-arrow">›</span>
+          <span class="route-stop">⚓ 尾浦港</span>
+        </div>
+        <div class="day-note note-blue">🌊 沿海全景观光列车 · 🎡 趣味粉红胶囊车厢 · 🌉 脚踩玻璃天桥挑战胆量 😱 · ⚓ 港口渔获美食</div>
+        <div class="day-meta">
+          <span class="meta-tag">🚗 包车9小时</span><span class="meta-tag">🌊 海岸风光</span><span class="meta-tag">🎡 趣味体验</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-item">
+      <div class="day-num-col">
+        <div class="day-num num-busan">D4</div>
+        <div class="day-line line-busan"></div>
+      </div>
+      <div class="day-card">
+        <div class="day-card-head">
+          <div>
+            <div class="day-badge badge-busan">DAY 04 · ROMANCE</div>
+            <div class="day-card-title">🎆 浪漫升级 · 游艇烟花之夜 &nbsp;<span style="font-size:12px;color:#999;">（包车9小时）</span></div>
+          </div>
+        </div>
+        <div class="day-route">
+          <span class="route-stop">🐉 海东龙宫寺</span><span class="route-arrow">›</span>
+          <span class="route-stop">🏝️ 五六岛</span><span class="route-arrow">›</span>
+          <span class="route-stop">🏄 广安里海滩</span><span class="route-arrow">›</span>
+          <span class="route-stop">🛥️ 游艇🎆烟花秀</span>
+        </div>
+        <div class="day-note note-blue">🙏 海浪中的千年古寺奇景 · 🌅 日落时分五六岛 · 🎆 夜晚游艇上仰望绚烂烟花 💫 最浪漫的夜晚</div>
+        <div class="day-meta">
+          <span class="meta-tag">🚗 包车9小时</span><span class="meta-tag">🛥️ 游艇体验</span><span class="meta-tag">🎆 烟花秀</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-item">
+      <div class="day-num-col">
+        <div class="day-num num-busan">D5</div>
+      </div>
+      <div class="day-card">
+        <div class="day-card-head">
+          <div>
+            <div class="day-badge badge-busan">DAY 05 · DEPARTURE</div>
+            <div class="day-card-title">🏠 暖心返程 · 满载回忆 👋</div>
+          </div>
+        </div>
+        <div class="day-route">
+          <span class="route-stop">🚗 商务专车</span><span class="route-arrow">›</span>
+          <span class="route-stop">✈️ 金海国际机场</span><span class="route-arrow">›</span>
+          <span class="route-stop">🏠 平安归来</span>
+        </div>
+        <div class="day-note note-blue">💙 告别美丽的海港城市，带走满满的蓝色记忆与烟花梦境 🌊🎆</div>
+        <div class="day-meta">
+          <span class="meta-tag">🚗 专车送机</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="city-spacer"></div>
+
+  <!-- ══ JEJU ══ -->
+  <div class="city-banner banner-jeju">
+    <div class="city-banner-bg">🌺</div>
+    <div class="city-banner-inner">
+      <div class="city-banner-accent"></div>
+      <h3>🌺 济州岛 Jeju</h3>
+      <p class="city-banner-sub">火山奇景 · 碧海蓝天 · 南国风情 🌴</p>
+      <div class="city-tag-row">
+        <span class="city-tag">🌋 火山地貌</span>
+        <span class="city-tag">🐬 追豚出海</span>
+        <span class="city-tag">🌈 彩虹公路</span>
+        <span class="city-tag">☕ 咖啡小镇</span>
+        <span class="city-tag">🐑 萌宠牧场</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="days-timeline">
+    <div class="day-item">
+      <div class="day-num-col">
+        <div class="day-num num-jeju">D1</div>
+        <div class="day-line line-jeju"></div>
+      </div>
+      <div class="day-card">
+        <div class="day-card-head">
+          <div>
+            <div class="day-badge badge-jeju">DAY 01 · ARRIVAL</div>
+            <div class="day-card-title">✈️ 济州初印象 · 南国风情 🌴</div>
+          </div>
+        </div>
+        <div class="day-route">
+          <span class="route-stop">🛬 抵达济州</span><span class="route-arrow">›</span>
+          <span class="route-stop">🚗 商务车接机</span><span class="route-arrow">›</span>
+          <span class="route-stop">🏨 入住酒店</span><span class="route-arrow">›</span>
+          <span class="route-stop">🌺 自由探索</span>
+        </div>
+        <div class="day-note note-green">🍊 品尝济州特色橘子 · 🐖 必尝黑猪烤肉 · 🍵 绿茶冰淇淋 · 感受与首尔截然不同的岛屿气息 🌊</div>
+        <div class="day-meta">
+          <span class="meta-tag">🚗 专车接机</span><span class="meta-tag">🌺 自由活动</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-item">
+      <div class="day-num-col">
+        <div class="day-num num-jeju">D2</div>
+        <div class="day-line line-jeju"></div>
+      </div>
+      <div class="day-card">
+        <div class="day-card-head">
+          <div>
+            <div class="day-badge badge-jeju">DAY 02 · NATURE</div>
+            <div class="day-card-title">🌋 东岸山海交响曲 🌅</div>
+          </div>
+        </div>
+        <div class="day-route">
+          <span class="route-stop">🐄 牛岛</span><span class="route-arrow">›</span>
+          <span class="route-stop">🌊 涉地可支</span><span class="route-arrow">›</span>
+          <span class="route-stop">🐠 Aqua Plant水族馆</span><span class="route-arrow">›</span>
+          <span class="route-stop">🌅 城山日出峰</span>
+        </div>
+        <div class="day-note note-green">🐄 迷你岛屿探秘 · 🌊 奇特玄武岩海岸 · 🌅 UNESCO世界遗产——城山日出峰 · 傍晚点亮一天中最美的金色时刻 ✨</div>
+        <div class="day-meta">
+          <span class="meta-tag">🌋 自然奇观</span><span class="meta-tag">🌅 日出圣地</span><span class="meta-tag">🐠 海洋探索</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-item">
+      <div class="day-num-col">
+        <div class="day-num num-jeju">D3</div>
+        <div class="day-line line-jeju"></div>
+      </div>
+      <div class="day-card">
+        <div class="day-card-head">
+          <div>
+            <div class="day-badge badge-jeju">DAY 03 · ART & NATURE</div>
+            <div class="day-card-title">🌿 西岸自然与艺术之旅 🌈</div>
+          </div>
+        </div>
+        <div class="day-route">
+          <span class="route-stop">🪨 柱状节理带</span><span class="route-arrow">›</span>
+          <span class="route-stop">🐑 小羊肖恩牧场 / 🐬 追海豚</span><span class="route-arrow">›</span>
+          <span class="route-stop">☕ 涯月咖啡街</span><span class="route-arrow">›</span>
+          <span class="route-stop">🌈 彩虹公路</span>
+        </div>
+        <div class="day-note note-green">🪨 壮观火山熔岩石柱震撼登场 · 🐑 萌宠互动 / 🐬 出海追豚二选一 · ☕ 济州最美网红咖啡街 · 🌈 驾车穿越彩虹海岸线</div>
+        <div class="day-meta">
+          <span class="meta-tag">🪨 火山地貌</span><span class="meta-tag">🐑 萌宠互动</span><span class="meta-tag">☕ 网红打卡</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-item">
+      <div class="day-num-col">
+        <div class="day-num num-jeju">D4</div>
+        <div class="day-line line-jeju"></div>
+      </div>
+      <div class="day-card">
+        <div class="day-card-head">
+          <div>
+            <div class="day-badge badge-jeju">DAY 04 · FREE</div>
+            <div class="day-card-title">🛍️ 自由探索 · 都市漫记 🚶‍♀️ &nbsp;<span style="font-size:12px;color:#999;">（自由行）</span></div>
+          </div>
+        </div>
+        <div class="day-route">
+          <span class="route-stop">🚶 自由活动</span><span class="route-arrow">›</span>
+          <span class="route-stop">🏃 宝健路</span><span class="route-arrow">›</span>
+          <span class="route-stop">⭐ 七星街</span><span class="route-arrow">›</span>
+          <span class="route-stop">🛒 东门传统市场</span>
+        </div>
+        <div class="day-note note-green">🍊 购买济州特产橘子手信 · 🛍️ 特色纪念品扫货 · 🥘 传统市场美食大探索 😋 · 品味最真实的济州生活气息</div>
+        <div class="day-meta">
+          <span class="meta-tag">🎈 自由行</span><span class="meta-tag">🛍️ 扫货</span><span class="meta-tag">🍜 美食</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-item">
+      <div class="day-num-col">
+        <div class="day-num num-jeju">D5</div>
+      </div>
+      <div class="day-card">
+        <div class="day-card-head">
+          <div>
+            <div class="day-badge badge-jeju">DAY 05 · DEPARTURE</div>
+            <div class="day-card-title">🏠 暖心归程 · 再见济州 🌺👋</div>
+          </div>
+        </div>
+        <div class="day-route">
+          <span class="route-stop">🚗 商务专车</span><span class="route-arrow">›</span>
+          <span class="route-stop">✈️ 济州国际机场</span><span class="route-arrow">›</span>
+          <span class="route-stop">🏠 平安归来</span>
+        </div>
+        <div class="day-note note-green">🌺 告别这座如梦如幻的火山小岛，带走满满的绿意与海风 🌊🌿💚，期待下一次的相遇</div>
+        <div class="day-meta">
+          <span class="meta-tag">🚗 专车送机</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 旅行贴士 -->
+  <div class="section">
+    <div class="sec-title">
+      <div class="sec-title-icon icon-gold">💡</div>
+      <div>
+        <h2>旅行小贴士</h2>
+        <p>TRAVEL TIPS · 出行必知 · 贴心提醒</p>
+      </div>
+    </div>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <span class="tip-icon">📋</span>
+        <div class="tip-label">必备证件 & 支付</div>
+        <ul class="tip-list">
+          <li><span class="ti">🛂</span>护照（有效期6个月以上）</li>
+          <li><span class="ti">📝</span>签证（济州岛免签 🎉）</li>
+          <li><span class="ti">💳</span>VISA卡（境外消费首选）</li>
+          <li><span class="ti">💴</span>韩币现金（市场小摊必备）</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <span class="tip-icon">🚇</span>
+        <div class="tip-label">本地交通攻略</div>
+        <ul class="tip-list">
+          <li><span class="ti">🚇</span>地铁：T-money交通卡 便捷经济</li>
+          <li><span class="ti">🚌</span>公交：换乘有优惠 💰</li>
+          <li><span class="ti">🚗</span>包车：全程商务车专属 ✅</li>
+          <li><span class="ti">📱</span>打车：Kakao T App 超方便</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <span class="tip-icon">📶</span>
+        <div class="tip-label">网络 & 通讯</div>
+        <ul class="tip-list">
+          <li><span class="ti">📡</span>流量卡：抵达后即插即用 ⚡</li>
+          <li><span class="ti">🛜</span>随身WiFi：支持多设备 👨‍👩‍👧</li>
+          <li><span class="ti">💬</span>Kakao Talk：当地通讯首选</li>
+          <li><span class="ti">✅</span>建议国内提前购买激活</li>
+        </ul>
+      </div>
+      <div class="tip-card">
+        <span class="tip-icon">👗</span>
+        <div class="tip-label">四季穿搭指南</div>
+        <ul class="tip-list">
+          <li><span class="ti">🌸</span>春（3-5月）赏樱 · 薄外套</li>
+          <li><span class="ti">☀️</span>夏（6-8月）清凉 · 防晒必备</li>
+          <li><span class="ti">🍁</span>秋（9-11月）观枫 · 叠穿外套</li>
+          <li><span class="ti">⛷️</span>冬（12-2月）厚羽绒 · 体验滑雪</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 适合人群 -->
+  <div class="section" style="padding-top: 0;">
+    <div class="sec-title">
+      <div class="sec-title-icon icon-purple">👥</div>
+      <div>
+        <h2>适合人群</h2>
+        <p>FOR EVERYONE · 每一类旅行者都有专属惊喜 🎁</p>
+      </div>
+    </div>
+    <div class="audience-grid">
+      <div class="aud-card">
+        <span class="aud-icon">👨‍👩‍👧</span>
+        <div class="aud-label">家庭亲子</div>
+        <div class="aud-sub">🎈 快乐出游</div>
+      </div>
+      <div class="aud-card">
+        <span class="aud-icon">👯‍♀️</span>
+        <div class="aud-label">朋友结伴</div>
+        <div class="aud-sub">🎉 欢乐同行</div>
+      </div>
+      <div class="aud-card">
+        <span class="aud-icon">💑</span>
+        <div class="aud-label">情侣度假</div>
+        <div class="aud-sub">💝 浪漫首选</div>
+      </div>
+      <div class="aud-card">
+        <span class="aud-icon">📷</span>
+        <div class="aud-label">摄影爱好者</div>
+        <div class="aud-sub">🌟 大片无处不在</div>
+      </div>
+      <div class="aud-card">
+        <span class="aud-icon">🍜</span>
+        <div class="aud-label">美食探索家</div>
+        <div class="aud-sub">😋 吃遍韩国</div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="footer-emoji-row">✈️ 🌸 🏯 🌊 🌋 🎆 🌺 ✨</div>
+  <div class="footer-title">尊享韩国定制</div>
+  <div class="footer-sub">PREMIUM KOREA TRAVEL · 专属您的完美韩国之旅</div>
+  <div class="footer-cities">
+    <div class="footer-city">
+      <span class="fc-icon">🏙️</span>
+      首尔 Seoul
+    </div>
+    <div class="footer-city">
+      <span class="fc-icon">🌊</span>
+      釜山 Busan
+    </div>
+    <div class="footer-city">
+      <span class="fc-icon">🌺</span>
+      济州岛 Jeju
+    </div>
+    <div class="footer-city">
+      <span class="fc-icon">🗺️</span>
+      更多定制
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
